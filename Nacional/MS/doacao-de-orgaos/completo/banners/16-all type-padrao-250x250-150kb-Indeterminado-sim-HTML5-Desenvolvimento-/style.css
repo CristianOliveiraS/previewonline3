@@ -1,0 +1,128 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#banner {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  background: #f9ecc6;
+}
+#i01 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#i02 {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  opacity: 1; /* visível o tempo todo */
+  animation: coinFloat 3.8s infinite ease-in-out;
+}
+
+@keyframes coinFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* altura do salto */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+#i03 {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+}
+#i03-1 {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+}
+
+#i04 {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+}
+#i04-1 {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+}
+#i04-2 {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+}
+
+#i05 {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+}
+#i05-1 {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+}
+#i05-2 {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  opacity: 0;
+}
+
+#i06 {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  opacity: 0;
+}
+
+#i08 {
+  position: absolute;
+  left: 0;
+  top: -50%;
+  opacity: 0;
+}
+
+#i07 {
+  position: absolute;
+  left: 0;
+  top: -90%;
+  opacity: 1; /* precisa estar visível pra pulsar */
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
