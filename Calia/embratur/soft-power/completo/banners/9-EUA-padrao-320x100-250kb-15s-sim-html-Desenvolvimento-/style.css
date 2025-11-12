@@ -1,0 +1,143 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#banner {
+  position: relative;
+  width: 320px;
+  height: 100px;
+  overflow: hidden;
+  background: #dadada;
+}
+
+#i01 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+#i02 {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  opacity: 0;
+}
+#i03 {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  opacity: 0;
+}
+#i04 {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  opacity: 0;
+}
+#i05 {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  opacity: 0;
+}
+
+#i06 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+#i07 {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  opacity: 0;
+}
+#i08 {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  opacity: 0;
+}
+
+#i09 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+#i10 {
+  position: absolute;
+  left: -10%;
+  top: 0;
+  opacity: 0;
+}
+#i11 {
+  position: absolute;
+  left: -10%;
+  top: 0;
+  opacity: 0;
+}
+
+#i12 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#i13 {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  opacity: 0;
+}
+#i14 {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  opacity: 0;
+}
+
+#i15 {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  opacity: 0;
+}
+
+#i15[style*="opacity: 1"],
+#i15.active {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Animação de pulsar suave */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.02);
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+#i16 {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  opacity: 0;
+}
