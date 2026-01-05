@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BannerBolt-468x60</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="ad.size" content="width=468, height=60">
+    
+    
+</head>
+<body style="margin: 0; padding: 0;">
+	
+<div id="preloader"><div class="loader"></div></div>
+<style>
+#preloader {
+	position: absolute;
+	width: 468px;
+	height: 60px;
+	background: #fff;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+}
+.loader {
+	border: 6px solid #f3f3f3;
+	border-top: 6px solid #3498db;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	animation: spin 1s linear infinite;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg);}
+	100% { transform: rotate(360deg);}
+}
+</style>
+
+	<a target="_blank" href="%%CLICKTAG%%"><div class="palco" style="width:468px; height:60px; position: relative; overflow: hidden; cursor: pointer; border: 1px solid #dfdfdf; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; background:#ffffff;" id="palco"><img id="ws_2036204" src="images/ws_2036204.png" style="position: absolute; left: 0px; top: 0px; width: 468px; height: 60px; display:none" /><img id="ws_2036205" src="images/ws_2036205.png" style="position: absolute; left: 43px; top: 23px; width: 382px; height: 20px; display:none" /><img id="ws_2036207" src="images/ws_2036207.png" style="position: absolute; left: 0px; top: 0px; width: 468px; height: 60px; display:none" /><img id="ws_2036208" src="images/ws_2036208.png" style="position: absolute; left: 144px; top: 10px; width: 220px; height: 40px; display:none" /><img id="ws_2036209" src="images/ws_2036209.png" style="position: absolute; left: 34px; top: 6px; width: 96px; height: 50px; display:none" /><img id="ws_2036211" src="images/ws_2036211.png" style="position: absolute; left: 0px; top: 0px; width: 468px; height: 60px; display:none" /><img id="ws_2036212" src="images/ws_2036212.png" style="position: absolute; left: 282px; top: 16px; width: 163px; height: 31px; display:none" /><img id="ws_2036213" src="images/ws_2036213.png" style="position: absolute; left: 18px; top: 10px; width: 258px; height: 38px; display:none" /><img id="ws_2036215" src="images/ws_2036215.png" style="position: absolute; left: 0px; top: 0px; width: 468px; height: 60px; display:none" /><img id="ws_2036216" src="images/ws_2036216.png" style="position: absolute; left: 45px; top: 20px; width: 378px; height: 20px; display:none" /><img id="ws_2036218" src="images/ws_2036218.png" style="position: absolute; left: 0px; top: 0px; width: 468px; height: 60px; display:none" /><img id="ws_2036219" src="images/ws_2036219.png" style="position: absolute; left: 158px; top: 18px; width: 296px; height: 25px; display:none" /><img id="ws_2036220" src="images/ws_2036220.png" style="position: absolute; left: 23px; top: 13px; width: 109px; height: 34px; display:none" /></div></a>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+	<script>
+	// Preloader logic
+	function preloadImages(imageIds, callback) {
+		let loaded = 0;
+		const total = imageIds.length;
+		if (total === 0) {
+			callback();
+			return;
+		}
+		imageIds.forEach(function(id) {
+			const img = document.getElementById(id);
+			if (!img) {
+				loaded++;
+				if (loaded === total) callback();
+				return;
+			}
+			if (img.complete) {
+				loaded++;
+				if (loaded === total) callback();
+			} else {
+				img.addEventListener("load", function() {
+					loaded++;
+					if (loaded === total) callback();
+				});
+				img.addEventListener("error", function() {
+					loaded++;
+					if (loaded === total) callback();
+				});
+			}
+		});
+	}
+
+	document.addEventListener("DOMContentLoaded", function (event) {
+		var imageIds = [];
+		// Coleta todos os ids de imagens do banner
+		var imgs = document.querySelectorAll("#palco img");
+		imgs.forEach(function(img) {
+			imageIds.push(img.id);
+		});
+		preloadImages(imageIds, function() {
+			var preloader = document.getElementById("preloader");
+			if (preloader) preloader.style.display = "none";
+			// ...restante do código de animação...
+			const banner = {
+				"bannerHeight": "60",
+				"bannerWidth": "468",
+				"frames":[
+            { "elementsData": [
+                        {
+            "layerId": "ws_2036204",
+            "x": 0,
+            "y": 0,
+            "delay": 0,
+            "in": "none",
+            "out": "none",
+            "startTime": 0,
+            "endTime": 3.0533117932149,
+            "width": 468,
+            "height": 60
+        },{
+            "layerId": "ws_2036205",
+            "x": 43,
+            "y": 23,
+            "delay": 0.2,
+            "in": "bottom",
+            "out": "none",
+            "startTime": 0,
+            "endTime": 3.0533117932149,
+            "width": 382,
+            "height": 20
+        },
+                    ]
+                },
+            
+            { "elementsData": [
+                        {
+            "layerId": "ws_2036207",
+            "x": 0,
+            "y": 0,
+            "delay": 0,
+            "in": "scale_out",
+            "out": "none",
+            "startTime": 3.0533117932149,
+            "endTime": 7.2116316639742,
+            "width": 468,
+            "height": 60
+        },{
+            "layerId": "ws_2036208",
+            "x": 144,
+            "y": 10,
+            "delay": 0.4,
+            "in": "bottom",
+            "out": "none",
+            "startTime": 3.0533117932149,
+            "endTime": 7.2116316639742,
+            "width": 220,
+            "height": 40
+        },{
+            "layerId": "ws_2036209",
+            "x": 34,
+            "y": 6,
+            "delay": 0,
+            "in": "scale_out",
+            "out": "none",
+            "startTime": 3.0533117932149,
+            "endTime": 7.2116316639742,
+            "width": 96,
+            "height": 50
+        },
+                    ]
+                },
+            
+            { "elementsData": [
+                        {
+            "layerId": "ws_2036211",
+            "x": 0,
+            "y": 0,
+            "delay": 0,
+            "in": "none",
+            "out": "none",
+            "startTime": 7.2116316639742,
+            "endTime": 11.428109854604,
+            "width": 468,
+            "height": 60
+        },{
+            "layerId": "ws_2036212",
+            "x": 282,
+            "y": 16,
+            "delay": 0.6,
+            "in": "bottom",
+            "out": "none",
+            "startTime": 7.2116316639742,
+            "endTime": 11.428109854604,
+            "width": 163,
+            "height": 31
+        },{
+            "layerId": "ws_2036213",
+            "x": 18,
+            "y": 10,
+            "delay": 0,
+            "in": "bottom",
+            "out": "none",
+            "startTime": 7.2116316639742,
+            "endTime": 11.428109854604,
+            "width": 258,
+            "height": 38
+        },
+                    ]
+                },
+            
+            { "elementsData": [
+                        {
+            "layerId": "ws_2036215",
+            "x": 0,
+            "y": 0,
+            "delay": 0,
+            "in": "scale_out",
+            "out": "none",
+            "startTime": 11.428109854604,
+            "endTime": 15.063004846527,
+            "width": 468,
+            "height": 60
+        },{
+            "layerId": "ws_2036216",
+            "x": 45,
+            "y": 20,
+            "delay": 0,
+            "in": "bottom",
+            "out": "none",
+            "startTime": 11.428109854604,
+            "endTime": 15.063004846527,
+            "width": 378,
+            "height": 20
+        },
+                    ]
+                },
+            
+            { "elementsData": [
+                        {
+            "layerId": "ws_2036218",
+            "x": 0,
+            "y": 0,
+            "delay": 0,
+            "in": "none",
+            "out": "none",
+            "startTime": 15.063004846527,
+            "endTime": 17.985460420032,
+            "width": 468,
+            "height": 60
+        },{
+            "layerId": "ws_2036219",
+            "x": 158,
+            "y": 18,
+            "delay": 0.4,
+            "in": "opacity",
+            "out": "none",
+            "startTime": 15.063004846527,
+            "endTime": 17.985460420032,
+            "width": 296,
+            "height": 25
+        },{
+            "layerId": "ws_2036220",
+            "x": 23,
+            "y": 13,
+            "delay": 0,
+            "in": "left",
+            "out": "none",
+            "startTime": 15.063004846527,
+            "endTime": 17.985460420032,
+            "width": 109,
+            "height": 34
+        },
+                    ]
+                },
+            ]
+
+			}
+			const bannerWidth = parseInt(banner.bannerWidth);
+			const bannerHeight = parseInt(banner.bannerHeight);
+			masterTimeline = gsap.timeline({
+				paused: false,
+				repeat: -1,
+				defaults: { ease: "power3.out" },
+			});
+			banner.frames.forEach((frame, index) => {
+
+				frame.elementsData.forEach((layer) => {
+
+					const start = parseFloat(layer.startTime.toFixed(1)) + layer.delay;
+					const end = parseFloat(layer.endTime.toFixed(1));
+
+					const durationAnimDefaultIn = 1;
+					const durationAnimDefaultOut = 0.8;
+					// Configura as animações no masterTimeline
+
+					const w = layer.width;
+					const h = layer.height;
+					const l = banner.frames.length;
+					const d = parseFloat(layer.delay.toFixed(1));
+
+					const newEnd = (w === bannerWidth && h === bannerHeight && layer.out === "none" && index < (l - 1) ? end + 2 : end);
+
+					masterTimeline
+						.set(`#${layer.layerId}`, { display: "block", transformOrigin: "50% 50%" }, start) // Garante que o elemento esteja visível
+						.fromTo(
+							`#${layer.layerId}`,
+							{
+								opacity: layer.in === "opacity" || layer.in != "none" ? 0 : 1,
+								x: layer.in === "left" ? -50 : layer.in === "right" ? 50 : 0,
+								y: layer.in === "top" ? -50 : layer.in === "bottom" ? 50 : 0,
+								scale: layer.in === "scale_in" ? 0.5 : layer.in === "scale_out" ? 1.5 : 1,
+							},
+							{
+								opacity: 1,
+								y: 0,
+								x: 0,
+								scale: 1,
+								duration: layer.in === "none" ? 0.01 : durationAnimDefaultIn
+							},
+							start
+						)
+						.to(
+							`#${layer.layerId}`,
+							{
+								opacity: layer.out === "opacity" || layer.out != "none" ? 0 : 1,
+								x: layer.out === "left" ? -50 : layer.out === "right" ? 50 : 0,
+								y: layer.out === "top" ? -50 : layer.out === "bottom" ? 50 : 0,
+								scale: layer.out === "scale_in" ? 0.5 : layer.out === "scale_out" ? 1.5 : 1,
+								duration: layer.out === "none" ? 0.01 : durationAnimDefaultOut
+							},
+							end - durationAnimDefaultOut
+						)
+						.set(`#${layer.layerId}`, { display: index < (l - 1)?"none":"block" }, newEnd);
+				});
+			});
+			masterTimeline.play();
+		});
+	});
+	</script>
+</body>
+</html>
